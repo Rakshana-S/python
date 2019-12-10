@@ -1,0 +1,8 @@
+#square and sort 
+n=int(input())
+arr = list(map(int, input().split()))
+d=[i*i for i in arr]
+print(d)
+s=sorted(d)
+print(s)
+
