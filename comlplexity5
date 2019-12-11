@@ -1,0 +1,9 @@
+str1=input()
+s=' '
+for i in str1:
+  if i.isalpha():
+      s+=i
+  else:
+      c=int(i)+1
+      s+=str(c)
+print(s)     
