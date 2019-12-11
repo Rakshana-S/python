@@ -1,4 +1,4 @@
-#square and sort 
+#square and sort single line input
 n=int(input())
 arr = list(map(int, input().split()))
 d=[i*i for i in arr]
@@ -6,3 +6,19 @@ print(d)
 s=sorted(d)
 print(s)
 
+#reverse without in built function
+n=int(input())
+arr=list(map(int,input().strip().split()))[:n]
+for i in range(-1,-(n+1_,-1):
+      print(arr[i],end=" ")
+ 
+#intersection of two sorted arrays
+n=int(input())
+m=int(input())
+a1=list(map(int,input().strip().split()))[:n]
+a2=list(map(int,input().strip().split()))[:m]
+print(*(set(a1).intersection(set(a2)))
+
+#intersection of 3 unsorted arrays
+#square 
+      
