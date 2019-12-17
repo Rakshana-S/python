@@ -1,0 +1,34 @@
+# 1...Finding occurenc in another string
+T=int(input())
+for t in range(T):
+    x=int(input())
+    y=int(input())
+    if y in x :
+       print("Index of first occurrence of y in x is {}".format(x.index(y)))
+    else:
+       print("Index of first occurrence of y in x is {}".format(k))
+    
+#2...Twice counter
+from collections import Counter
+T=int(input())
+for t in range(T):
+    n=int(input())
+    str1=input()
+    str2=str1.split()
+    s=Counter(str2)
+    d=list(s.values())
+    print(d.count(2))
+    
+  #3....Remove characters of str2 from str1  
+  s1=input()
+  s2=input()
+  s=list(filter(lambda i : i not in s2,s1))
+  print(*s)
+  
+  
+  #4..hexadecimal to binary
+  x=input()
+  d=int(x,2)
+  print("{} in binary = {}".format(x,bin(d).lstrip('0b')))
+  
+  
