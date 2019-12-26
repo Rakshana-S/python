@@ -1,0 +1,50 @@
+# 1... Given an array print -1 if num is missing 
+
+n=int(input())
+arr=list(map(int,input().strip().split()))[:n]
+m=max(arr)
+for i in range(m+1):
+      if i not in arr:
+          print("-1",end=" ")
+      else:
+          print(i,end=" ")
+          
+ # 2... Find the missing number 
+ 
+ n=int(input())
+ f=0
+ s=0
+ arr=list(map(int,input().strip().split()))[:n]
+ for i in range(1,n):
+      if i not in arr:
+          print(i)
+          break
+      else:
+          print("-1")
+
+
+# 3...Union of two unsorted array
+
+n=int(input())
+m=int(input())
+a1=list(map(int,input().strip().split()))[:n]
+a2=list(map(int,input().strip().split()))[:m]
+for i in a2:
+    if i not in a1:
+        a1.append(i)
+print(*sorted(a1))
+
+# 4...Find the largest possible number from the array
+
+n=int(input())
+a1=list(map(int,input().strip().split()))[:n]
+a=[]
+ans=' '
+l=len(str(max(a1)))+1
+for i in a1:
+    temp=str(i) * l
+    a.append((temp[:l:],i))
+ a.sort(reverse = True)
+ for i in a:
+    ans += str(i[1])
+ print(ans)   
