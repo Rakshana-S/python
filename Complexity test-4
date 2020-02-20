@@ -1,0 +1,78 @@
+''' Rotate Array 
+     Given an unsorted array of size N , rotate it by D elements (anti-clockwise)'''
+    
+    def rotate(arr,d,n):
+        for i in range(d):
+            leftrotate(arr,n)
+    
+    def leftrotate(arr,n):
+        temp=arr[0]
+        for i in range(n-1):
+            arr[i]=arr[i+1]
+        arr[n-1]=temp
+        
+    def printarr(arr,n):
+        for i in range(n):
+            print(arr[i],end=" ")
+    n=int(input())
+    for i in range(n):
+        s=input().split()
+        x=int(s[0])
+        y=int(s[1])
+        arr=list(map(int,input().strip(0.split()))
+        rotate(arr,y,x)
+        printarr(arr,x)
+        
+        
+'''segregate 0's and 1's in an array '''
+
+    n=int(input())
+    a=input().split()
+    c=0
+    for i in range(0,n):
+        if a[i]=='0':
+            c+=1
+    for i in range(0,c):
+        a[i]='0'
+    for i in range(c,n):
+        a[i]='1'
+    for i in range(0,n):
+        print(a[i],end=" ")
+        
+''' Time Conversion : Given a time in 12 hr format , convert it to military (24 hr)time '''
+
+    t = int(input())
+    for i in range(t):
+        x=input()
+        if x[-2:] == 'AM' and x[:2] == '12':
+            print(" 12" + x[2:-2])
+        elif x[:-2] == 'AM':
+            print(x[:-2])
+        elif x[-2:] == 'PM' and x[:2] == '12':
+            print(x[:-2])
+        else:
+              print(str(int(x[:2]) + 12) + x[2:8])
+              
+                 
+''' validating parenthesis string '''
+
+    n=int(input())
+    for i in range(n):
+        s=input()
+        d={')' : '(' , '}' : '{' , ']' : '[' }
+        stack=[]
+        for i in s:
+            if not stack:
+                stack.append(i)
+            elif i not in d:
+                stack.append(i)
+            elif stack[-1] == d[i] :
+                stack.pop()
+            else:
+                stack.append(i)
+       if stack:
+            print("False")
+       else:
+            print("True")
+            
+    
