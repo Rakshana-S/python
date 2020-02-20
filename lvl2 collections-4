@@ -1,0 +1,55 @@
+'''Given 2 strings make them anagram by removing character so that strings contain same data set'''
+
+from collections import Counter
+s1=list(input())
+s2=list(input())
+d1=Counter(s1)
+d2=Counter(s2)
+k1=d1.keys()
+k2=d2.keys()
+set_1=set(k1)
+c=len(set_1.intersection(k2))
+if c==0:
+  print(len(k1)+len(k2))
+else:
+  print(max(len(k1),len(k2))-c)
+  
+ '''Hungry pizza lovers'''
+ 
+ T=int(input())
+ for t in range(T):
+    n=int(input())
+    a={}
+    for i in range(n):
+        a[i+1] = sum(list(map(int,input().split())))
+    b=sorted(a.items(),key=lambda x :(x[1],x[0]))
+    for j in range(n):
+        print(b[j][0])
+ 
+ '''sorting acc to seniority of age '''
+ 
+ from collections import namedtuple 
+T=int(input())
+for t in range(T):
+    n=int(input())
+    s=[]
+    emp = namedtuple('emp',['eid','name','age','desig'])
+    for i in range(n):
+        eid,name,age,desig=input().split(',')
+        s1=emp(eid,name,age,desig)
+        s.append(s1)   
+    for i in sorted(s,key=lambda x:x.age,reverse=True):
+        print(list(i),end=" ")
+    print()  
+    
+ '''Remove duplicate data'''
+ 
+ from collections import Counter,OrderedDict
+ n=int(input())
+ l=[]
+ for i in range(n):
+    stud=input()
+    l.append(stud)
+ s=OrderedDict(Counter(l))
+ for k in s.keys():
+    print(k)
