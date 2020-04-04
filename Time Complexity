@@ -1,0 +1,11 @@
+import math
+S,X,N=(map(int,input().split()))
+count=0
+while N>0:
+    T,Y=map(int,input().split())
+    S=S-Y 
+    N-=1
+    count+=1
+Ex=math.ceil(S/X)
+print(Ex+count)
+ 
