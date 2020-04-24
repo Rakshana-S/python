@@ -23,3 +23,34 @@ for j in a:
                     if x==k1:
                         c+=1
 print(c)
+
+#Mesoketes Wall problem 
+
+s = ('Day1T1-N-X-5:T2-W-X-3;Day2T1-S-X-2').replace(' ','').split('Day')
+days = s[1::]
+d,c={},0
+for i in range(len(days)):
+    a = days[i].split(':')
+    if len(a)>1:
+        for j in range(len(a)):
+            k=a[j].index('X')
+            side=a[j][k-2]
+            ht=a[j][k+2]
+            if side not in d:
+                c+=1
+                d[side]=ht
+            elif d[side]<ht:
+                c+=1
+                d[side]=ht
+    else:
+        k=days[i].index('X')
+        side=days[i][k-2]
+        ht=days[i][k+2]
+        if side not in d:
+            c+=1
+            d[side]=ht
+        elif d[side]<ht:
+            c+=1
+            d[side]=ht
+            
+print(c)   
