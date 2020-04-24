@@ -1,0 +1,25 @@
+# Chemist Bowl Problem 
+
+n=4
+d={}
+for i in range(n):
+    s=input().split(' =')
+    k=s[0]
+    d[k]=s[1]
+m=1
+a=[]
+for i in range(m):
+    a.append(input())
+c=0   
+b=[]
+for j in a:
+    for k,v in d.items():
+        if j==k and j not in b:
+            c+=1
+            b.append(j)
+            l=v.split(' + ')
+            for x in l:
+                for k1,v1 in d.items():
+                    if x==k1:
+                        c+=1
+print(c)
